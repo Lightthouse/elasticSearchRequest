@@ -1,0 +1,19 @@
+{
+    "name": "ksa/elasticsearch",
+    "description": "adapter for elasticsearch classes",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kazantcev Stepan",
+            "email": "kazantcev.stepan@gmail.com"
+        }
+    ],
+    "require": {
+        "graylog2/gelf-php": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ksa\\Elasticsearch\\": "./src"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "host": "log.certit.ru",
+    "port": "12201",
+    "path": "/gelf"
+}
