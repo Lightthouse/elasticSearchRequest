@@ -17,7 +17,7 @@ require_once '../vendor/autoload.php';
             $this->transport = new HttpTransport($host,$port,$path);
         }
 
-        public function sendLog(int $level, string $message, string $client_prefix = ''){
+        public function sendLog(int $level, string $message, string $client_prefix = '', array $additional_parameters = []){
 
             $message_json = ['message'=>$client_prefix . ' ' . $message];
 
@@ -26,8 +26,9 @@ require_once '../vendor/autoload.php';
 
             $message = new Message();
             $message
-            ->setShortMessage(json_encode($message_json))
-            ->setLevel($level);
+                ->setFullMessage($additional_parameters)
+                ->setShortMessage(json_encode($message_json))
+                ->setLevel($level);
             $publisher->publish($message);
 
         }

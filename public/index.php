@@ -11,7 +11,7 @@ require_once '../functions/sendLog.php';
     //$test->sendLog(2,'exception','ksa');
 
 //через функцию
-    sendLogs(3,'warning','ksa');
+    sendLogs(3,'no prefix', 'ksa',[12,453,67]);
 
 
 
